@@ -9,13 +9,15 @@ import { VideoComponent } from './video/video.component';
 import { AboutComponent } from './about/about.component'
 import { MusicDataService } from './services/musicData.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MusicAlbumComponent } from './music-album/music-album.component';
 @NgModule({
   declarations: [
     AppComponent,
     MusicComponent,
     HomeComponent,
     VideoComponent,
-    AboutComponent
+    AboutComponent,
+    MusicAlbumComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
      { path:'home' ,component :HomeComponent},
       {path:'music' ,component :MusicComponent},
       {path:'video' ,component :VideoComponent},
-      {path:'about' ,component :AboutComponent}
+      {path:'about' ,component :AboutComponent},
+      {path:'musicAlbum' ,component :MusicAlbumComponent}
     ])
   ],
   providers: [MusicDataService],

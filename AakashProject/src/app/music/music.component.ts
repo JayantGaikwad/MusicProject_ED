@@ -22,24 +22,13 @@ export class MusicComponent implements OnInit {
   ngOnInit() 
   {
     this.musicDataService.getMusic().subscribe(jsonData =>{ this.musicData=jsonData;
-      console.log("jsonn",jsonData);
-      console.log("music Array",this.musicData);
-      this.processMusicData(this.musicData);
-    });
-  }
-
-  processMusicData(musicData:IMusicModel)
-  {
-      console.log("musicModel",musicData);
-      this.musicData =musicData[0];
-      this.artistArray = this.musicData['artists']
-      console.log("music artists----", this.musicData['artists']);
-       this.artistArray.forEach((value,index) => {
-          console.log("value--",value); 
-          console.log("index--",index); 
-        });
-     
     
+      console.log("music----music Array",this.musicData);
+      this.artistArray = this.musicData[0]['artists'];
+      console.log("artistArray-----jsonn",this.artistArray);
+      console.log("artistArray-----jsonn element",this.artistArray[0]['name']);
+               
+  });
   }
   }
 

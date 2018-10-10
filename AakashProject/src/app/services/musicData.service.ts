@@ -8,14 +8,19 @@ import { HttpClient } from '@angular/common/http';
 export class MusicDataService
 {
     productdata : any[];
-constructor(private http:Http,private httpCommon:HttpClient)
+constructor(private http:Http,private httpClient:HttpClient)
 {
 
 }
 
-getMusic():Observable<any>
-{
-   return this.httpCommon.get('https://ngmusicdb.herokuapp.com/api/getMusic');
-}
+/** working fine but commenting becuase there is no image available in following UI so storing api data with image in assets/musicData.json  */
+// getMusic():Observable<any>
+// {
+//    return this.httpClient.get('https://ngmusicdb.herokuapp.com/api/getMusic');
+// }
+
+getMusic():Observable<any> {
+    return this.httpClient.get("assets/json/musicData.json");
+  }
 
 }

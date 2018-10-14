@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicDataService } from '../services/musicData.service';
 import { IMusicModel } from '../model/music.model';
-import { HttpClient } from '@angular/common/http';
 import { ArtistModel } from '../model/artist.model';
 
 @Component({

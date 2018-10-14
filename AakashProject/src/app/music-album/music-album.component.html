@@ -5,20 +5,26 @@
   <h1>it is working </h1>
 
   <div class="row">
-
     <div class="col-sm-4">
-      <a href="#hendricksid" data-toggle="collapse">
-        <img src="./assets/hendricks.jpg" alt="hendricks" width="300" height="300">
-        <p><strong>hendricks</strong></p><br>
-      </a>
-
-      <div id="hendricksid" class="collapse">
-        <p>Jimi Hendrix</p>
-        <p>jimi_hendrix </p>
-        <p>James Marshall Jimi Hendrix was an American rock guitarist, singer, and songwriter. </p>
+        <ul>
+            <li *ngFor="let artist of artistArray">              
+        <a href="#{{artist.id}}"  data-toggle="collapse">
+        <img src="{{artist.image}}"  alt="{{artist.name}}" width="255" height="255">
+        <p><strong></strong></p><br>
+        </a>
+        <ul class="btn btn-info">
+            <li><a [routerLink]="['/musicAlbum',artist.id]">check Album</a></li>
+          </ul>
+        <div id="{{artist.id}}" class="collapse">
+            
+          <p>{{artist.name}}</p>
+          <p>{{artist.cover}} </p>
+          <p>{{artist.bio}}</p>
+        </div>
+      </li>
+    </ul>
       </div>
-    </div>
-  </div>
+</div>
   <div>
 
     <table class="table table-striped">

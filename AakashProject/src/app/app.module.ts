@@ -28,7 +28,8 @@ import { MusicAlbumComponent } from './music-album/music-album.component';
       {path:'music' ,component :MusicComponent},
       {path:'video' ,component :VideoComponent},
       {path:'about' ,component :AboutComponent},
-      {path:'musicAlbum' ,component :MusicAlbumComponent}
+      {path:'musicAlbum' ,component :MusicAlbumComponent},
+      {path:'musicAlbum/:id' ,component :MusicAlbumComponent}
     ])
   ],
   providers: [MusicDataService],

@@ -45,6 +45,7 @@
           "name": "Madonna",
           "cover": "madonna",
           "bio": "Madonna Louise Ciccone is an American singer, songwriter, actress, and businesswoman.",
+          "image":"./assets/madonna.jpg",
           "albums": [
             {
               "albumId": "b1",
@@ -82,6 +83,7 @@
           "name": "Johnny Cash",
           "cover": "johnny_cash",
           "bio": "John R. Cash was an American singer-songwriter, guitarist, actor, and author.",
+          "image":"./assets/JohnnyCash.jpg",
           "albums": [
             {
               "albumId": "c1",
@@ -119,6 +121,7 @@
           "name": "Pink Floyd",
           "cover": "pink_floyd",
           "bio": "Pink Floyd were an English rock band formed in London in 1965. They achieved international acclaim with their progressive and psychedelic music. ",
+          "image":"./assets/pinkFloyd.jpg",
           "albums": [
             {
               "albumId": "d1",

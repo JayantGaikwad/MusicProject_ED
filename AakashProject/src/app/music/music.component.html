@@ -6,83 +6,28 @@
       <div class="container text-center">
         <h3>THE MUSIC </h3>
         <p><em>We love music!</em></p>
-        <p>If you love music then you wil get everything</p>
+        <p>If you love music then you wil get everything here.</p>
         <br>
         <div class="row">
-
             <div class="col-sm-4">
-                <a href="#hendricksid"  data-toggle="collapse">
-                <img src="./assets/hendricks.jpg"  alt="hendricks" width="255" height="255">
+                <ul>
+                    <li *ngFor="let artist of artistArray">              
+                <a href="#{{artist.id}}"  data-toggle="collapse">
+                <img src="{{artist.image}}"  alt="{{artist.name}}" width="255" height="255">
                 <p><strong></strong></p><br>
                 </a>
                 <ul class="btn btn-info">
-                    <li><a [routerLink]="['/musicAlbum']">check Album</a></li>
+                    <li><a [routerLink]="['/musicAlbum',artist.id]">check Album</a></li>
                   </ul>
-                <div id="hendricksid" class="collapse">
-                  <p>Jimi Hendrix</p>
-                  <p>jimi_hendrix </p>
-                  <p>James Marshall Jimi Hendrix was an American rock guitarist, singer, and songwriter.</p>
+                <div id="{{artist.id}}" class="collapse">
+                    
+                  <p>{{artist.name}}</p>
+                  <p>{{artist.cover}} </p>
+                  <p>{{artist.bio}}</p>
                 </div>
+              </li>
+            </ul>
               </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
-          <div class="col-sm-4">
-           
-            <img src="./assets/bandMember1.jpg" alt="Guitar" width="255" height="255">
-            <p><strong>Guitar Then Anntic</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
-          <div class="col-sm-4">
-            <img src="./assets/bandMember2.jpg" alt="MerMaid" width="255" height="255">
-            <p><strong>Mermaid queen of Sea</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
-          <div class="col-sm-4">
-            
-            <img src="./assets/bandMember3.jpg" alt="Dragon" width="255" height="255">
-            <p><strong>Game of Thrones</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
-          <div class="col-sm-4">
-            <img src="./assets/bandMember4.jpg" alt="Frozon" width="255" height="255">
-            <p><strong>Frozon</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
-          <div class="col-sm-4">
-            <img src="./assets/bandMember5.jpg" alt="LA LA LAND" width="255" height="255">
-            <p><strong>LA LA LAND</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
-          <div class="col-sm-4">
-            <img src="./assets/bandMember6.jpg" alt="Fury" width="255" height="255">
-            <p><strong>Fury</strong></p><br>
-            <button type="button" class="btn btn-info">check Album</button>
-          </div>
         </div>
       </div>
     </div>

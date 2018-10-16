@@ -17,6 +17,7 @@ export class MusicAlbumComponent implements OnInit {
   musicData :IMusicModel;
   artistArray: ArtistModel[];
   artistId :Number
+  currentArtistAlbum : ArtistModel;
   constructor(private musicDataService : MusicDataService,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
@@ -37,10 +38,16 @@ export class MusicAlbumComponent implements OnInit {
       this.musicData =musicData[0];
       this.artistArray = this.musicData['artists']
       console.log("music artists----", this.musicData['artists']);
-      this.artistArray.findIndex(this.artistId);
+      //this.artistArray.findIndex(this.artistId);
        this.artistArray.forEach((value,index) => {
+         if(index == artistID)
+         {
           console.log("value--",value); 
           console.log("index--",index); 
+          this.currentArtistAlbum = value;
+          console.log("current Artist array"+this.currentArtistAlbum.bio);
+          console.log("current Artist array"+this.currentArtistAlbum.albums[0]['price']);
+        }
         }); 
   }
 

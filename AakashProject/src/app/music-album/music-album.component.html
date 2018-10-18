@@ -5,28 +5,18 @@
   <h1>it is working </h1>
 
   <div class="row">
-    <div class="col-sm-4">
-        <ul>
-            <li *ngFor="let artist of artistArray">              
-        <a href="#{{artist.id}}"  data-toggle="collapse">
-        <img src="{{artist.image}}"  alt="{{artist.name}}" width="255" height="255">
-        <p><strong></strong></p><br>
+        <ul>                
+        <a href="#lastData.id"  data-toggle="collapse">
+        <img src="{{lastData.image}}"  alt="{{lastData.name}}" width="300" height="300">
         </a>
-        <ul class="btn btn-info">
-            <li><a [routerLink]="['/musicAlbum',artist.id]">check Album</a></li>
-          </ul>
-        <div id="{{artist.id}}" class="collapse">
-            
-          <p>{{artist.name}}</p>
-          <p>{{artist.cover}} </p>
-          <p>{{artist.bio}}</p>
+        <div id="{{lastData.id}}" class="collapse">       
+          <p>{{lastData.name}}</p>
+          <p>{{lastData.cover}} </p>
+          <p>{{lastData.bio}}</p>
         </div>
-      </li>
     </ul>
-      </div>
 </div>
   <div>
-
     <table class="table table-striped">
       <thead>
         <tr>
@@ -38,23 +28,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor= "let currentAlbum of albumData"> 
+          <th scope="row">{{currentAlbum.albumId}}</th>
+          <td>{{currentAlbum.title}}</td>
+          <td>{{currentAlbum.year}}</td>
+          <td>{{currentAlbum.cover}}</td>
+          <td>{{currentAlbum.price}}</td>
         </tr>
       </tbody>
     </table>

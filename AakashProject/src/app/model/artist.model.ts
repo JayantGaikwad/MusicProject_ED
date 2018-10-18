@@ -7,5 +7,6 @@ export interface ArtistModel
     cover:String,
     bio:String,
     albums : AlbumModel[],
-    genre :String
+    genre :String,
+    image :string
 }
